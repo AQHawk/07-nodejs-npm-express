@@ -1,0 +1,23 @@
+{
+  "name": "07-nodejs-npm-express",
+  "version": "1.0.0",
+  "description": "Node JS server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AQHawk/07-nodejs-npm-express.git"
+  },
+  "author": "Matthew LeBlanc, Adrian Hawk, Fred Rapp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AQHawk/07-nodejs-npm-express/issues"
+  },
+  "homepage": "https://github.com/AQHawk/07-nodejs-npm-express#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  }
+}

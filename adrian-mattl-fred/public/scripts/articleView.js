@@ -73,8 +73,8 @@ articleView.setTeasers = () => {
   });
 };
 
-// COMMENT: When/where is this function invoked? What event ultimately triggers its execution? Explain the sequence of code execution when this function is invoked.
-// PUT YOUR RESPONSE HERE
+// COMMENTed: When/where is this function invoked? What event ultimately triggers its execution? Explain the sequence of code execution when this function is invoked.
+// This 'method' is invoked at the end of new.html page after all the content is loaded. The sequence of execution starts by showing the .tab-content elements and then hiding the #export-field content and then adding an event listener to the #article-json on 'focus'. And then adding an event listner to #new-form to instantiate the articleView-create method on 'change'. And then adding an event listener to #new-form to instantiate the articleView.submit method on 'submit'.
 articleView.initNewArticlePage = () => {
   $('.tab-content').show();
   $('#export-field').hide();
@@ -86,8 +86,8 @@ articleView.initNewArticlePage = () => {
   $('#new-form').on('submit', articleView.submit);
 };
 
-// COMMENT: When is this function called? What event ultimately triggers its execution?
-// PUT YOUR RESPONSE HERE
+// COMMENTed: When is this function called? What event ultimately triggers its execution?
+// This method is called when the 'change' event handler is triggered.
 articleView.create = () => {
   let article;
   $('#articles').empty();
@@ -111,8 +111,8 @@ articleView.create = () => {
   $('#article-json').val(`${JSON.stringify(article)},`);
 };
 
-// COMMENT: When is this function called? What event ultimately triggers its execution?
-// PUT YOUR RESPONSE HERE
+// COMMENTed: When is this function called? What event ultimately triggers its execution?
+// this method is called when the 'submit' event handler is triggered. When the client submit's the form using the submit button.
 articleView.submit = event => {
   event.preventDefault();
   let article = new Article({
@@ -125,7 +125,7 @@ articleView.submit = event => {
   });
 
   // COMMENT: Where is this function defined? When is this function called? What event ultimately triggers its execution?
-  // PUT YOUR RESPONSE HERE
+  // This function is defined in article.js file, this method is called directly above after the article is created, and the ultimate execution is triggered when the user triggers the submit event handler
   article.insertRecord();
 }
 
