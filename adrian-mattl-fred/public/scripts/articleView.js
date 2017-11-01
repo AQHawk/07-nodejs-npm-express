@@ -124,7 +124,7 @@ articleView.submit = event => {
     publishedOn: $('#article-published:checked').length ? new Date() : null
   });
 
-  // COMMENT: Where is this function defined? When is this function called? What event ultimately triggers its execution?
+  // COMMENTED: Where is this function defined? When is this function called? What event ultimately triggers its execution?
   // This function is defined in article.js file, this method is called directly above after the article is created, and the ultimate execution is triggered when the user triggers the submit event handler
   article.insertRecord();
 }
