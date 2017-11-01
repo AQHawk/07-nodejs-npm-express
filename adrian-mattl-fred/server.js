@@ -28,7 +28,7 @@ app.post('/articles', bodyParser, (req, res)=> {
 // DONE: Write a new route, using an arrow function, that will handle a request and send the new.html file back to the user
 app.get('/new', (req, res)=>{
   console.log('Success..this is new.html');
-  res.sendfile('new.html', {root:'./public'});
+  res.sendFile('new.html', {root:'./public'});
 })
 
 // Done: Refactor this to arrow function, log to the console a message that lets you know which port your server has started on
